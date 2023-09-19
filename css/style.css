@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-.content {
-    max-width: 1440px;
+.content {    
+    width: 70%;
     margin: auto;
     padding: 1em;
 }
@@ -36,7 +36,8 @@ body {
 .bottomSlider {
     width:100%;
     display: flex;
-    justify-content: end;  
+   /* justify-content: end;  */
+   justify-content: space-between;
 }
 
 p {
@@ -50,64 +51,97 @@ p {
 }
 
 .button {
-    padding: 0.5em 0.5em;
+    padding: 1em 1em;
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    border: medium dotted chocolate;    
     background-color: brown;
     margin-left: 1em;
     transition: all 0.4s ease;
+    
 }
-
 .button:hover {
     background-color: goldenrod;
     border: medium dotted chocolate;   
 }
+
+.button:active{
+    background-color: darkorange;
+    border: medium dotted chocolate;   
+}
+
 
 input[name="btn"] {
     visibility: hidden;
     display: none;
     margin-left: 0;
 }
-#btn1:checked~.active {
+
+#btn1:checked~.active 
+{
     margin-left: 0%;
 }
-#btn2:checked~.active {
+#btn1:checked~.active>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+    border: medium dotted chocolate;
+}
+#btn2:checked~.active 
+{
     margin-left: -25%;
 }
-
-#btn3:checked~.active {
+#btn2:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+    border: medium dotted chocolate;
+}
+#btn3:checked~.active 
+{
     margin-left: -50%;
 }
-
-#btn4:checked~.active {
+#btn3:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+    border: medium dotted chocolate;
+}
+#btn4:checked~.active 
+{
     margin-left: -75%;
+}
+#btn4:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+    border: medium dotted chocolate;
 }
 
 @media screen and (max-width: 320px) {
 
 .bottomSlider {
-    display: flex;
-    justify-content: center;
-    
+    display: flexbox;
+    flex-direction: column-reverse;
+    justify-content: space-between;    
 }
+.pagination
+{
+    align-self: center;
+}
+
 p
 {
     font-size: 1em;       
     line-height: normal;
     margin-right: 60%;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 .button {
-    padding: 0.3em 0.3em;
+    padding: 0.3em;
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
     border-color: #0235b5;
     background-color: #0235b5;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
     transition: all 0.4s ease;
     margin-top: 1em;
 }
