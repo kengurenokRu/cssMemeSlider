@@ -30,49 +30,53 @@ body {
 
 .slide {
     width: 100%;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
 }
 
 .bottomSlider {
     width:100%;
     display: flex;
-   /* justify-content: end;  */
    justify-content: space-between;
+   margin-top: 1em;
+   align-items: center;
+   
 }
 
 p {
     font-size: 2em;
     line-height: normal;
     color: white;
-    font-weight: normal;    
+    font-weight: normal;  
+      
 }
 .pagination {
     display: flex;    
 }
 
 .button {
-    padding: 1em 1em;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
     background-color: brown;
-    margin-left: 1em;
     transition: all 0.4s ease;
-    
+    box-sizing: content-box;
+    border: 1em solid #2c2c2d;    
 }
+
 .button:hover {
     background-color: goldenrod;
-    border: medium dotted chocolate;
     cursor: pointer;   
+    box-sizing: content-box;
+    border: 1em solid #2c2c2d;
 }
 
 .button:active{
     background-color: darkorange;
-    border: medium dotted chocolate;   
+    box-sizing: content-box;    
 }
 
 
-input[name="btn"] {
+input{
     visibility: hidden;
     display: none;
     margin-left: 0;
@@ -85,7 +89,6 @@ input[name="btn"] {
 #btn1:checked~.active>.bottomSlider>.pagination>.button1 
 {
     background-color: goldenrod;
-    border: medium dotted chocolate;
 }
 #btn2:checked~.active 
 {
@@ -94,7 +97,6 @@ input[name="btn"] {
 #btn2:checked~.active2>.bottomSlider>.pagination>.button1 
 {
     background-color: goldenrod;
-    border: medium dotted chocolate;
 }
 #btn3:checked~.active 
 {
@@ -103,7 +105,6 @@ input[name="btn"] {
 #btn3:checked~.active2>.bottomSlider>.pagination>.button1 
 {
     background-color: goldenrod;
-    border: medium dotted chocolate;
 }
 #btn4:checked~.active 
 {
@@ -112,40 +113,41 @@ input[name="btn"] {
 #btn4:checked~.active2>.bottomSlider>.pagination>.button1 
 {
     background-color: goldenrod;
-    border: medium dotted chocolate;
 }
 
 @media screen and (max-width: 320px) {
 
 .bottomSlider {
-    display: flexbox;
+    display: flex;
     flex-direction: column-reverse;
-    justify-content: space-between;    
+    align-items: start;  
+    margin-top: 0;
+
 }
 .pagination
 {
     align-self: center;
     display: flex;
     justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
-
 p
 {
-    font-size: 1em;       
+    font-size: 1.3em;       
     line-height: normal;
-    margin-right: 60%;
-    margin-top: 2em;
+    justify-self: left;
+    align-self: stretch;
 }
 .button {
     padding: 0.3em;
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    border-color: #0235b5;
-    background-color: #0235b5;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
     transition: all 0.4s ease;
-    margin-top: 1em;
+    box-sizing: content-box;
+    border: 0.5em solid #2c2c2d;
 }
   }
+
+  
