@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {    
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+}
+
+body {
+    background-color: #2c2c2d;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    display: flex;
+}
+
+.img {
+    margin-left: 0;
+    width: 25%;
+    transition: all 1s ease-out;
+}    
+
+.slide {
+    width: 100%;
+    /*margin-bottom: 1em;*/
+}
+
+.bottomSlider {
+    width:100%;
+    display: flex;
+   justify-content: space-between;
+   margin-top: 1em;
+   align-items: center;
+   
+}
+
+p {
+    font-size: 2em;
+    line-height: normal;
+    color: white;
+    font-weight: normal;  
+      
+}
+.pagination {
+    display: flex;    
+}
+
+.button {
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-color: brown;
+    transition: all 0.4s ease;
+    box-sizing: content-box;
+    border: 1em solid #2c2c2d;    
+}
+
+.button:hover {
+    background-color: goldenrod;
+    cursor: pointer;   
+    box-sizing: content-box;
+    border: 1em solid #2c2c2d;
+}
+
+.button:active{
+    background-color: darkorange;
+    box-sizing: content-box;    
+}
+
+
+input{
+    visibility: hidden;
+    display: none;
+    margin-left: 0;
+}
+
+#btn1:checked~.active 
+{
+    margin-left: 0%;
+}
+#btn1:checked~.active>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+}
+#btn2:checked~.active 
+{
+    margin-left: -25%;
+}
+#btn2:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+}
+#btn3:checked~.active 
+{
+    margin-left: -50%;
+}
+#btn3:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+}
+#btn4:checked~.active 
+{
+    margin-left: -75%;
+}
+#btn4:checked~.active2>.bottomSlider>.pagination>.button1 
+{
+    background-color: goldenrod;
+}
+
+@media screen and (max-width: 500px) {
+
+.bottomSlider {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;  
+    margin-top: 0;
+
+}
+.pagination
+{
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+p
+{
+    font-size: 1.3em;       
+    line-height: normal;
+    justify-self: left;
+    align-self: stretch;
+}
+.button {
+    padding: 0.3em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    box-sizing: content-box;
+    border: 1em solid #2c2c2d;
+}
+  }
+
+  
